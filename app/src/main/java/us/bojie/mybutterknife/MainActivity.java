@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,5 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         Log.d(TAG, "onCreate: " + mTextView.getText().toString() + " " + mTextView2.getText().toString());
+    }
+
+    @OnClick(R.id.button)
+    public void click() {
+        Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
     }
 }
